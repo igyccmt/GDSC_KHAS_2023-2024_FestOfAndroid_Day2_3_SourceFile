@@ -1,7 +1,7 @@
 package com.example.classes
 
 fun main() {
-    val oturumcu = Kisi("Emre", 20, hitap = "Bey")
+    val oturumcu = Oturumcu("Emre", 20, hitap = "Bey")
 
     println(message = "Hoşgeldiniz ${oturumcu.isim} ${oturumcu.hitap}!")
 }
@@ -46,7 +46,7 @@ fun main() {
  * oldukça farklılar, değil mi?
  */
 
-class Kisi(val isim: String, var yas: Int, val hitap: String) {
+class Oturumcu(val isim: String, var yas: Int, val hitap: String) {
 
 }
 
