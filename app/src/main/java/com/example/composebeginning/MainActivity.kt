@@ -121,7 +121,8 @@ fun HappyBirthday(nameOfReciever: String, nameOfGiver: String, ageOfReciever: In
 
 
 /**
- * @Preview sayesinde emulator açmadan ya da fiziksel bir cihaza bağlanmadan kolayca layoutu görebiliriz.
+ * @Preview sayesinde emulator açmadan ya da fiziksel bir cihaza bağlanmadan kolayca layoutu görebiliriz. Hadi
+ * deneyelim.
  */
 
 @Preview(showBackground = true)
