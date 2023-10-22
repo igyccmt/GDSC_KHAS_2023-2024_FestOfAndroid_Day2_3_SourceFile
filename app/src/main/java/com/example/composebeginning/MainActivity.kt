@@ -73,48 +73,136 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun HappyBirthday(nameOfReciever: String, nameOfGiver: String, ageOfReciever: Int, modifier: Modifier = Modifier) {
+    if (ageOfReciever < 15) {
+        /**
+         * Row sütunu, Column satırı, Box ise kutuyu kontrol etmemizi sağlar ve içine değerler alır. Kendilerini modife
+         * edebileceğimiz gibi içerilerindeki özellikleri de modife edebiliriz.
+         */
 
-    /**
-     * Row sütunu, Column satırı, Box ise kutuyu kontrol etmemizi sağlar ve içine değerler alır. Kendilerini modife
-     * edebileceğimiz gibi içerilerindeki özellikleri de modife edebiliriz.
-     */
+        /**
+         * Text metin yazmamıza yararken, Image resim yüklememize yarar.
+         */
 
-    /**
-     * Text metin yazmamıza yararken, Image resim yüklememize yarar.
-     */
-
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Image(painter = painterResource(id = R.drawable.androidparty), contentDescription = null, Modifier.fillMaxHeight(), contentScale = ContentScale.Crop)
-    }
-    Box(modifier = Modifier.fillMaxSize()) {
-        Column (Modifier.padding(vertical=25.dp).align(Alignment.TopStart)) {
-            Text(
-                text = "İyi ki doğdun sevgili $nameOfReciever!",
-                color = Color.White,
-                modifier = Modifier.padding(vertical = 25.dp)
-            )
-            Text(
-                text = "Çoktan $ageOfReciever yaşına geldin $nameOfReciever!",
-                color = Color.White,
-                modifier = Modifier.padding(vertical = 25.dp)
-            )
-            Text(
-                text = "Bu yaşın sana en güzel şeyleri getirsin.",
-                color = Color.White,
-                modifier = Modifier.padding(vertical = 25.dp)
+        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            Image(
+                painter = painterResource(id = R.drawable.androidparty),
+                contentDescription = null,
+                Modifier.fillMaxHeight(),
+                contentScale = ContentScale.Crop
             )
         }
-        Column (Modifier.align(Alignment.BottomEnd).padding(vertical = 25.dp)) {
-            Text(
-                text = "Seni çok seven,",
-                color = Color.White,
-                modifier = Modifier.padding(vertical = 25.dp)
+        Box(modifier = Modifier.fillMaxSize()) {
+            Column(Modifier.padding(vertical = 25.dp).align(Alignment.TopStart)) {
+                Text(
+                    text = "İyi ki doğdun sevgili $nameOfReciever!",
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp)
+                )
+                Text(
+                    text = "Çoktan $ageOfReciever yaşına geldin $nameOfReciever! Hızlı büyüyorsun!",
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp)
+                )
+                Text(
+                    text = "Bu yaşın sana en güzel şeyleri getirsin.",
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp)
+                )
+            }
+            Column(Modifier.align(Alignment.BottomEnd).padding(vertical = 25.dp)) {
+                Text(
+                    text = "Seni çok seven,",
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp)
+                )
+                Text(
+                    text = nameOfGiver,
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp).align(Alignment.End)
+                )
+            }
+        }
+    }
+    else if ((ageOfReciever > 15) and (ageOfReciever < 40)){
+        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            Image(
+                painter = painterResource(id = R.drawable.androidparty),
+                contentDescription = null,
+                Modifier.fillMaxHeight(),
+                contentScale = ContentScale.Crop
             )
-            Text(
-                text = nameOfGiver,
-                color = Color.White,
-                modifier = Modifier.padding(vertical = 25.dp)
+        }
+        Box(modifier = Modifier.fillMaxSize()) {
+            Column(Modifier.padding(vertical = 25.dp).align(Alignment.TopStart)) {
+                Text(
+                    text = "İyi ki doğdun $nameOfReciever!",
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp)
+                )
+                Text(
+                    text = "Bir yaşına daha geldin $nameOfReciever! Mutlu $ageOfReciever'ler!",
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp)
+                )
+                Text(
+                    text = "Bu yaşın sana en güzel şeyleri getirsin.",
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp)
+                )
+            }
+            Column(Modifier.align(Alignment.BottomEnd).padding(vertical = 25.dp)) {
+                Text(
+                    text = "Seni çok seven,",
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp)
+                )
+                Text(
+                    text = nameOfGiver,
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp).align(Alignment.End)
+                )
+            }
+        }
+    }
+    else {
+        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            Image(
+                painter = painterResource(id = R.drawable.androidparty),
+                contentDescription = null,
+                Modifier.fillMaxHeight(),
+                contentScale = ContentScale.Crop
             )
+        }
+        Box(modifier = Modifier.fillMaxSize()) {
+            Column(Modifier.padding(vertical = 25.dp).align(Alignment.TopStart)) {
+                Text(
+                    text = "İyi ki doğdun sayın $nameOfReciever!",
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp)
+                )
+                Text(
+                    text = "Mutlu $ageOfReciever'ler!",
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp)
+                )
+                Text(
+                    text = "Bu yaşın sana en güzel şeyleri getirsin.",
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp)
+                )
+            }
+            Column(Modifier.align(Alignment.BottomEnd).padding(vertical = 25.dp)) {
+                Text(
+                    text = "Saygılarımla, seni çok seven,",
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp)
+                )
+                Text(
+                    text = nameOfGiver,
+                    color = Color.White,
+                    modifier = Modifier.padding(vertical = 25.dp).align(Alignment.End)
+                )
+            }
         }
     }
 }
@@ -129,6 +217,6 @@ fun HappyBirthday(nameOfReciever: String, nameOfGiver: String, ageOfReciever: In
 @Composable
 fun HappyBirthdayPreview() {
     ComposeBeginningTheme {
-        HappyBirthday("Duru", nameOfGiver = "Tuba", ageOfReciever = 21)
+        HappyBirthday("Duru", nameOfGiver = "Tuba", ageOfReciever = 13)
     }
 }
