@@ -8,7 +8,7 @@ fun main () {
 
 /**
  * Nullability, yani null olabilme - boş olabilme özelliğini kullanırken dikkatli olmamız gereken konular
- * var. Null olabilecek bir değerin tip değerinin yanına "?" koymayı unutmayın! Örneğe bakalım.
+ * var. Null olabilecek bir değerin tip değerinin yanına "?" koymayı unutmayın! Örneğe bakalım :)
  */
 
 
