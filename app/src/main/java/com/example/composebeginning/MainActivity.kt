@@ -75,7 +75,7 @@ class MainActivity : ComponentActivity() {
 fun HappyBirthday(nameOfReciever: String, nameOfGiver: String, ageOfReciever: Int, modifier: Modifier = Modifier) {
     if (ageOfReciever < 15) {
         /**
-         * Row sütunu, Column satırı, Box ise kutuyu kontrol etmemizi sağlar ve içine değerler alır. Kendilerini modife
+         * Row satırı, Column sütunu, Box ise kutuyu kontrol etmemizi sağlar ve içine değerler alır. Kendilerini modife
          * edebileceğimiz gibi içerilerindeki özellikleri de modife edebiliriz.
          */
 
