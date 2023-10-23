@@ -10,6 +10,18 @@ fun main(){
     kontrol(trafikLambasi)
 }
 
+/**
+ * If-Else kalıbı, bir durumun/şartın doğruluğu üzerine hareket etmek istediğimizde kullandığımız
+ * kalıplardır. "Eğer ... ise ... yap, değilse ... yap" gibi. Else if ise birden fazla durum/şart
+ * vermek istediğimizde kullandığımız bir kalıp.
+ */
+
+
+/**
+ * When ise bir durum doğruluğunu korurken yapılacak şeyler için kullanılır. "... doğruyken ... yap"
+ */
+
+
 fun kontrol (renk: String){
     when (renk) {
         "Yeşil" -> println("Geçebilirsiniz")
