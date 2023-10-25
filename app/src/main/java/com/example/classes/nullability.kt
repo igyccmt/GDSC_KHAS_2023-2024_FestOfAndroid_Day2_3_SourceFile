@@ -1,6 +1,12 @@
 package com.example.classes
+
+/**
+ * nullability yani boş olabilme durumu. Boş değer alabilecek olan değişken ya da parametrelerimizin
+ * tipinin yanına ? koyarak buna ulaşabiliriz.
+ */
+
 fun main() {
-    var telefonBir = Phone(brand = null, upToDate = true)
+    var telefonBir = Phone(brand = "Redmi", upToDate = false)
     phoneUser("Tuba", 21, phoneType = telefonBir.phoneModel, androidVersion = telefonBir.androidVersion)
 }
 
@@ -15,8 +21,6 @@ class Phone(brand: String? = "Samsung", upToDate: Boolean) {
     var androidVersion: String?
         get() = if (upToDate) "Android 13" else "Android 12 ya da aşağı"
         set(value) {
-            _androidVersion = if (upToDate) value else "Android 12 ya da aşağı"
+            androidVersion = if (upToDate) value else "Android 12 ya da aşağı"
         }
-
-    private var _androidVersion: String? = null
 }
