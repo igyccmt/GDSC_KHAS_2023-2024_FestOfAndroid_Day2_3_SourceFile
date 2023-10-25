@@ -1,19 +1,22 @@
 package com.example.classes
-
-fun main () {
-
-    phone("Tuba", 21, "Iphone",null)
-
+fun main() {
+    var telefonBir = Phone(brand = null, upToDate = true)
+    phoneUser("Tuba", 21, phoneType = telefonBir.phoneModel, androidVersion = telefonBir.androidVersion)
 }
 
-/**
- * Nullability, yani null olabilme - boş olabilme özelliğini kullanırken dikkatli olmamız gereken konular
- * var. Null olabilecek bir değerin tip değerinin yanına "?" koymayı unutmayın! Örneğe bakalım :)
- */
-
-
-fun phone (isim: String, yas: Int, phoneType: String?, androidVersion: String?){
-
+fun phoneUser(isim: String, yas: Int, phoneType: String?, androidVersion: String?) {
     println("$yas yaşındaki $isim, $phoneType'ı kullanıyor ve Android'inin versiyonu $androidVersion!")
+}
 
+class Phone(brand: String? = "Samsung", upToDate: Boolean) {
+    private var upToDate: Boolean = upToDate
+    var phoneModel: String? = brand
+
+    var androidVersion: String?
+        get() = if (upToDate) "Android 13" else "Android 12 ya da aşağı"
+        set(value) {
+            _androidVersion = if (upToDate) value else "Android 12 ya da aşağı"
+        }
+
+    private var _androidVersion: String? = null
 }
