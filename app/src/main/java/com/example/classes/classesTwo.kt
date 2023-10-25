@@ -14,6 +14,9 @@ fun main() {
     println(buzdolabım.speakerVolume)
     buzdolabım.increaseSpeakerVolume()
     println(buzdolabım.speakerVolume)
+
+    val evim = SmartHome(roomAmount = 4, stores = 2)
+
 }
 
 open class AkilliCihaz(os: String){
@@ -32,4 +35,9 @@ class AkilliBuzdolabı(osOf : String, ekranBüyüklüğü: Double, androidVersio
         speakerVolume++
         println("Speaker volume increased to $speakerVolume.")
     }
+}
+
+class SmartHome(roomAmount: Int, stores: Int){
+    val buzdolabı = AkilliBuzdolabı(androidVersion = "Android 6", ekranBüyüklüğü = 17.4,
+        kapakSayisi = 2, osOf = "Android", buzlukTipi = "NoFrost")
 }
